@@ -1,4 +1,4 @@
-# From Java 6 Java 8 
+# From Java 6 to Java 8 
 ## What's new?
 
 +++
@@ -25,7 +25,7 @@
 
 - try with resource |
 - Diamond operator |
-- Multi Catch
+- Multi Catch |
 
 +++
 
@@ -97,6 +97,7 @@ try {
 - Predicate |
 - Consumer |
 - Supplier |
+- Function |
 
 ---
 
@@ -202,7 +203,7 @@ System.out::println
     Optional<Integer> opt = Optional.of(100);
 
     opt.isPresent();
-    opt.fiter(i -> i > 10);
+    opt.filter(i -> i > 10);
     opt.isPresent(System.out::println);
     opt.map(String::toString);
     opt.orElse(0);
@@ -256,7 +257,7 @@ try(Stream<String> lines = Files.lines(path)) {
 
 ---
 
-### Data-Time API
+### Date-Time API
 
 
 ---
