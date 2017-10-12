@@ -1,0 +1,6 @@
+# logo: assets/
+# footnote: "Some text"
+# vertical-center: false
+
+theme: black
+theme-override : assets/css/PITCHME.css
