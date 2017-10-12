@@ -1,10 +1,11 @@
-# Java 8 
+# Java 6 to Java 8 
 ## What's new?
 
 +++
 
 ### Overview
 
+- Java 7 Goodies |
 - Functional Interfaces |
 - Default Methods |
 - Lambda Expressions |
@@ -12,11 +13,81 @@
 
 +++
 
-### Overview
+### Overview cont'd
 
 - Optional |
 - Stream API |
 - Date-Time API |
+
+---
+
+### Java 7 Goodies
+
+- try with resource |
+- Diamond operator |
+- Multi Catch |
+
++++
+
+### Examples
+
+#### try with resource 
+
+```java
+InputStream in = null;
+try {
+    in = new FileInputStream("x.txt");
+    // do something
+} finally {
+    if (in != null) {
+        in.close();
+    }
+} 
+
+try(InputStream in = new FileInputStream(x.txt)) {
+    // do something
+}
+```
+@[1-9](Java <7 way) 
+@[11-13](Java 7+ way)
+
++++
+
+### Examples
+
+#### Diamond Operator 
+
+```java
+List<String> list = new ArrayList<String>()
+
+List<String> list = new ArrayList<>()
+```
+@[1](Java <7 way) 
+@[3](Java 7+ way)
+
++++
+
+### Examples
+
+#### Multi Catch 
+
+```java
+try {
+    // some code
+} catch(Exception1 exc) {
+    // handle Exception
+} catch(Exception2 exc) {
+    // handle Exception
+}
+
+try {
+    // some code
+} catch(Exception1 | Exception2 exc ) {
+    // handle Exception
+}
+```
+@[1-7](Java <7 way) 
+@[9-13](Java 7+ way)
 
 ---
 
@@ -26,6 +97,7 @@
 - Predicate |
 - Consumer |
 - Supplier |
+- Function |
 
 ---
 
@@ -131,7 +203,7 @@ System.out::println
     Optional<Integer> opt = Optional.of(100);
 
     opt.isPresent();
-    opt.fiter(i -> i > 10);
+    opt.filter(i -> i > 10);
     opt.isPresent(System.out::println);
     opt.map(String::toString);
     opt.orElse(0);
@@ -185,7 +257,7 @@ try(Stream<String> lines = Files.lines(path)) {
 
 ---
 
-### Data-Time API
+### Date-Time API
 
 
 ---

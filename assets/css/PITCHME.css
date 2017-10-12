@@ -6,3 +6,12 @@
     color: #666;
 }
 
+.reveal h3, .reveal h4, .reveal h5 {
+    color: #666;
+    text-transform: none;
+}
+
+.reveal h1, .reveal h2 {
+    text-transform: none;
+}
+    
