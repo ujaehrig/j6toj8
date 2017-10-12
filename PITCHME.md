@@ -1,4 +1,4 @@
-# From Java 6 to Java 8 
+# Java 6 to Java 8 
 ## What's new?
 
 +++
