@@ -1,5 +1,5 @@
 # Java 6 to Java 8 
-## What's new?
+## What changed??
 
 +++
 
@@ -9,12 +9,12 @@
 - Functional Interfaces |
 - Default Methods |
 - Lambda Expressions |
-- Method References |
 
 +++
 
 ### Overview cont'd
 
+- Method References |
 - Optional |
 - Stream API |
 - Date-Time API |
@@ -114,6 +114,7 @@ try {
 - Replacement for some anonymous classes |
 - but consider the scope! |
 - Syntax: (params) -> code |
+- Can be used as variable |
 
 +++
 
@@ -230,7 +231,31 @@ System.out::println
 
 ### Stream API
 
+- java.util.stream |
+- Stream and native Variants |
+- intermediate methods |
+- terminal methods |
+- serial vs. parallel |
 
++++
+
+### Intermediate 
+
+- map(Function<T, R>) |
+- filter(Predicate<T>) |
+- flatMap(Function<T, Stream<R>>) |
+- distinct() |
+- sorted() |
+
++++
+
+### Terminal
+
+- reduce() |
+- collect() | 
+- use Collectors class |
+- allMatch(), anyMatch() |
+- min(), max(), count() |
 
 +++ 
 
