@@ -1,5 +1,5 @@
 # Java 6 to Java 8 
-## What changed??
+## What changed?
 
 +++
 
@@ -155,6 +155,9 @@ executorService.submit(() -> out.println("Lambda is in thread: " + currentThread
 - Avoid side effects |
 - Prefer method references |
 
+Note:
+This is a speaker note.
+
 ---
 
 ### Method References
@@ -176,8 +179,8 @@ Integer::valueOf
 i -> new Integer(i)
 Integer::new
 
-x -> x.getValue()
-X::getValue
+i -> i.toString()
+Integer::toString
 
 x -> System.out.println(x)
 System.out::println
@@ -228,6 +231,9 @@ System.out::println
 - Don't use for parameters |
 - Prefer orElse() to get() |
 
+Note:
+Explain the best practices (TODO)
+
 ---
 
 ### Stream API
@@ -242,9 +248,9 @@ System.out::println
 
 ### Intermediate 
 
-- map(Function<T, R>) |
-- filter(Predicate<T>) |
-- flatMap(Function<T, Stream<R>>) |
+- map(Function&lt;T, R>) |
+- filter(Predicate&lt;T>) |
+- flatMap(Function&lt;T, Stream&lt;R>>) |
 - distinct() |
 - sorted() |
 
@@ -253,12 +259,25 @@ System.out::println
 ### Terminal
 
 - reduce() |
-- collect() | 
+- collect() |
 - use Collectors class |
 - allMatch(), anyMatch() |
 - min(), max(), count() |
 
-+++ 
++++
+
+### Examples
+
+```java
+List<Integer> list;
+
+list.stream().map(Integer::toString).collect(Collectors.toList());
+list.stream().filter(i -> i > 0).collect(Collectors.toList());
+list.stream().distinct().collect(Collectors.toList());
+list.stream().sorted().collect(Collectors.toList());
+```
+
++++
 
 ### Exercise
 
@@ -275,7 +294,8 @@ Find the longest line in a file
 
 ```java
 try(Stream<String> lines = Files.lines(path)) {
-    final Optional<String> max = lines.max(Comparator.comparingInt(String::length));
+    final Optional<String> max = 
+       lines.max(Comparator.comparingInt(String::length));
     String maxString = max.get();
     System.out.println(maxString.length() + " : " + maxString);
 }
