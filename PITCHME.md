@@ -104,6 +104,7 @@ try {
 ### Default Methods
 
 - Allows code in interfaces |
+- Backward compatibility for interfaces |
 
 ---
 
