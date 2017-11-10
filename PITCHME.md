@@ -290,6 +290,11 @@ Note:
 - flatMap(Function&lt;T, Stream&lt;R>>) |
 - distinct() |
 - sorted() |
+- limit() |
+
+Note:
+- flatMap returns a new Stream for each element of the stream
+  Example: Matrix: Stream over rows, return stream of each column
 
 +++
 
@@ -298,7 +303,8 @@ Note:
 - reduce() |
 - collect() |
 - use Collectors class |
-- allMatch(), anyMatch() |
+- allMatch(), anyMatch(), noneMatch() |
+- findAny(), findFirst() |
 - min(), max(), count() |
 
 +++
