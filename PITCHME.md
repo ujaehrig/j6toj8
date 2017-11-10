@@ -227,12 +227,17 @@ System.out::println
 ### Best practices
 
 - Use for return values |
+- Prefer empty Collection to Optional&lt;Collection> |
 - Don't use for fields |
 - Don't use for parameters |
 - Prefer orElse() to get() |
+- Consider Null object pattern |
 
 Note:
-Explain the best practices (TODO)
+- Optional is not serializable (fields)
+- Unncessary wrapping (parameters)
+- get() might throw
+- http://dolszewski.com/java/java-8-optional-use-cases/
 
 ---
 
