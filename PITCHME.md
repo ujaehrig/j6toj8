@@ -276,6 +276,10 @@ list.stream().filter(i -> i > 0).collect(Collectors.toList());
 list.stream().distinct().collect(Collectors.toList());
 list.stream().sorted().collect(Collectors.toList());
 ```
+@[3](map an int to a string)
+@[4](filter all ints > 0)
+@[5](remove duplicates)
+@[6](sort the stream)
 
 +++
 
@@ -287,6 +291,12 @@ Find the longest line in a file
 - Comparator.comparingInt(ToIntFunction<? super T>) |
 - Stream.max(Comparator<? super T>) |
 - BaseStream.close() |
+
+Note:
+- Files.lines returns lines of a text file
+- comparingInt returns a Comparator with a given function
+- Stream#max returns the max element for a given Comparator
+- BaseStream@close is needed for InputStreams etc.
 
 +++
 
