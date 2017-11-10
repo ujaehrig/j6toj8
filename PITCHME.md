@@ -1,5 +1,5 @@
 # Java 6 to Java 8 
-## What changed??
+## What changed?
 
 +++
 
@@ -155,6 +155,9 @@ executorService.submit(() -> out.println("Lambda is in thread: " + currentThread
 - Avoid side effects |
 - Prefer method references |
 
+Note:
+This is a speaker note.
+
 ---
 
 ### Method References
@@ -176,8 +179,8 @@ Integer::valueOf
 i -> new Integer(i)
 Integer::new
 
-x -> x.getValue()
-X::getValue
+i -> i.toString()
+Integer::toString
 
 x -> System.out.println(x)
 System.out::println
@@ -228,6 +231,9 @@ System.out::println
 - Don't use for parameters |
 - Prefer orElse() to get() |
 
+Note:
+Explain the best practices (TODO)
+
 ---
 
 ### Stream API
@@ -242,9 +248,9 @@ System.out::println
 
 ### Intermediate 
 
-- map(Function<T, R>) |
-- filter(Predicate<T>) |
-- flatMap(Function<T, Stream<R>>) |
+- map(Function&lt;T, R>) |
+- filter(Predicate&lt;T>) |
+- flatMap(Function&lt;T, Stream&lt;R>>) |
 - distinct() |
 - sorted() |
 
@@ -253,12 +259,29 @@ System.out::println
 ### Terminal
 
 - reduce() |
-- collect() | 
+- collect() |
 - use Collectors class |
 - allMatch(), anyMatch() |
 - min(), max(), count() |
 
-+++ 
++++
+
+### Examples
+
+```java
+List<Integer> list;
+
+list.stream().map(Integer::toString).collect(Collectors.toList());
+list.stream().filter(i -> i > 0).collect(Collectors.toList());
+list.stream().distinct().collect(Collectors.toList());
+list.stream().sorted().collect(Collectors.toList());
+```
+@[3](map an int to a string)
+@[4](filter all ints > 0)
+@[5](remove duplicates)
+@[6](sort the stream)
+
++++
 
 ### Exercise
 
@@ -269,13 +292,20 @@ Find the longest line in a file
 - Stream.max(Comparator<? super T>) |
 - BaseStream.close() |
 
+Note:
+- Files.lines returns lines of a text file
+- comparingInt returns a Comparator with a given function
+- Stream#max returns the max element for a given Comparator
+- BaseStream@close is needed for InputStreams etc.
+
 +++
 
 ### Solution
 
 ```java
 try(Stream<String> lines = Files.lines(path)) {
-    final Optional<String> max = lines.max(Comparator.comparingInt(String::length));
+    final Optional<String> max = 
+       lines.max(Comparator.comparingInt(String::length));
     String maxString = max.get();
     System.out.println(maxString.length() + " : " + maxString);
 }
@@ -285,6 +315,17 @@ try(Stream<String> lines = Files.lines(path)) {
 
 ### Date-Time API
 
+- Package: java.time |
+- Replaces Joda-Time |
+- Immutable types |
+- Clock and Instant |
+- Duration vs. Period |
+- LocalDateTime vs. ZonedDateTime vs. OffsetDateTime |
+
+Note:
+- Instead of ms since 1st Jan '70, it's now seconds and ns 
+- LocalDateTime can't represent an Instant w/o timezone
+- Duration is time-based, Period is date-based
 
 ---
 
