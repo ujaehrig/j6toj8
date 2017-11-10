@@ -31,7 +31,7 @@
 
 ### Examples
 
-#### try with resource 
+#### try with resource
 
 ```java
 InputStream in = null;
@@ -69,7 +69,7 @@ List<String> list = new ArrayList<>()
 
 ### Examples
 
-#### Multi Catch 
+#### Multi Catch
 
 ```java
 try {
@@ -93,11 +93,24 @@ try {
 
 ### Functional Interfaces
 
-- java.util.function |
+- Package: java.util.function |
 - Predicate |
 - Consumer |
 - Supplier |
 - Function |
+
+Note:
+- Predicate returns boolean, accepts 1 argument
+- BiPredicate and native variants
+- HOF Predicate: and, or, negate
+- Consumer returns void and accepts 1 argument
+- BiConsumer and native variants
+- HOF Consumer: andThen
+- Supplier returns a type and accepts nothing
+- native variants
+- Function returns type R, accepts type T
+- BiFunction, Operator and native variants
+- HOF Function: compose, andThen
 
 ---
 
@@ -105,6 +118,9 @@ try {
 
 - Allows code in interfaces |
 - Backward compatibility for interfaces |
+
+Note:
+- HOF as default methods
 
 ---
 
@@ -142,9 +158,16 @@ executorService.submit(() -> out.println("Lambda is in thread: " + currentThread
 
 - Use @FunctionalInterface on functional interfaces |
 - Avoid too many default methods |
-- Use parameter inference |
+- Use parameter type inference |
 - Omit parentheses on single arguments |
 - Keep lambda expressions short |
+
+Note:
+- @FunctionalInterface seems superfluous, but will check, if interface has only one method
+- default methods might clash
+- In most cases the type can be inferred and should not be written in the parameter list
+- Without parentheses the code looks cleaner 
+- Think of Lambda as expression
 
 +++
 
@@ -156,7 +179,9 @@ executorService.submit(() -> out.println("Lambda is in thread: " + currentThread
 - Prefer method references |
 
 Note:
-This is a speaker note.
+- Like before: Keep lambda short
+- return is allowed, but usually unnecessary on one-liners
+- Methods references are better readable
 
 ---
 
@@ -195,7 +220,7 @@ System.out::println
 
 ### Optional
 
-- Replacement for null |
+- Replacement for null returns |
 - Enhanced Guava Optional |
 - Provides useful methods |
 
@@ -243,11 +268,18 @@ Note:
 
 ### Stream API
 
-- java.util.stream |
+- Package: java.util.stream |
 - Stream and native Variants |
 - intermediate methods |
 - terminal methods |
-- serial vs. parallel |
+- Spliterator, serial vs. parallel |
+- Collectors, StreamSupport |
+
+Note:
+- Stream, DoubleStream, etc and StreamSupport
+- intermediate methods return a stream
+- terminal methods return void
+- Spliterator: traverse and partition
 
 +++
 
