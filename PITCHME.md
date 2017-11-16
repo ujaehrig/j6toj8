@@ -1,6 +1,6 @@
----?include=topics/cover/PITCHME.md
+---?include=topics/overview/PITCHME.md
 ---?include=topics/java7/PITCHME.md
----?include=topics/function_interfaces/PITCHME.md
+---?include=topics/functional_interfaces/PITCHME.md
 ---?include=topics/default_methods/PITCHME.md
 ---?include=topics/lambda/PITCHME.md
 ---?include=topics/method_refs/PITCHME.md
