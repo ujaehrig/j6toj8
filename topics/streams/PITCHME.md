@@ -62,9 +62,9 @@ list.stream().sorted().collect(Collectors.toList());
 
 #### IntelliJ - Java Stream Debugger
 
-![Logo](assets/example-1.png)
+![Logo](assets/img/example-1.png)
 
-+++?image=assets/example-2.png?size=auto 90%
++++?image=assets/img/example-2.png?size=auto 90%
 
 
 +++
