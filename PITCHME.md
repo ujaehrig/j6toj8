@@ -326,6 +326,16 @@ list.stream().sorted().collect(Collectors.toList());
 
 +++
 
+### Tooling
+
+#### IntelliJ - Java Stream Debugger
+
+![Logo](assets/example-1.png)
+
++++?image=assets/example-2.png?size=auto 90%
+
+
++++
 ### Exercise
 
 Find the longest line in a file
