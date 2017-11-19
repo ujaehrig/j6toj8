@@ -3,16 +3,17 @@
 
 +++
 
-### Overview
+### Overview Part I
 
 - Java 7 Goodies |
+- Functional Programming |
 - Functional Interfaces |
 - Default Methods |
 - Lambda Expressions |
 
 +++
 
-### Overview cont'd
+### Overview Part II
 
 - Method References |
 - Optional |
