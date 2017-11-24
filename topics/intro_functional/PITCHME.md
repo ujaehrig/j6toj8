@@ -1,4 +1,4 @@
-### Function Programming
+### Functional Programming
 
 - No side effects |
 - Functions are values |
@@ -9,7 +9,14 @@
 
 +++
 
-### Higher Order Function
+### Functions are values
+
+- Function can be assigned to variable |
+- Function as first-class citizen |
+
++++
+
+### Higher Order Functions
 
 - At least one of: |
 - Take one ore more function argument |
@@ -23,7 +30,9 @@ Note:
   to a new function
 - Currying modifies function with > 1 arg
   to functions with only one arg which 
-  returns a HOF 
+  returns a HOF. 
+  Example: divide(x, y): return x/y
+   => div(d): return x -> divide(x, d) 
 
 +++
 
@@ -48,13 +57,24 @@ Note:
 
 ### Lambda 
 
-TODO
+- Lambda calculus (mathematics) | 
+- Anonymous function |
+- Can have closure (later) |
+- Not recursive |
 
 +++
 
-### Closure 
+### Closure (function closure)
 
-TODO
+- Bound variables |
+- function scope vs. outer scope |
+- function + variables |
+- final / effective final | 
+
+Note:
+The variables outside the function scope
+must be final or effective final and can't
+be changed. 
 
 +++ 
 
