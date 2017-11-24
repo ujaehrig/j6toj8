@@ -3,6 +3,8 @@
 - try with resource |
 - Diamond operator |
 - Multi Catch |
+- string switch |
+- java.io.file API |
 
 +++
 
