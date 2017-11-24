@@ -11,19 +11,18 @@
 
 ### Functions are values
 
-- Function can be assigned to variable |
-- Function as first-class citizen |
+- Functions can be assigned to variables |
+- Functions are first-class citizen |
 
 +++
 
 ### Higher Order Functions
 
-- At least one of: |
+- At least one of these two: |
 - Take one ore more function argument |
 - Return a function |
 
-- Composition |
-- Currying |
+- Composition, Currying |
 
 Note:
 - Composition composes multiple functions 
@@ -40,7 +39,7 @@ Note:
 
 - Return same output when given the same input |
 - No side effect |
-- doesn't modify arguments |
+- don't modify arguments |
 - easy to test |
 - easy to parallelize |
 
@@ -50,7 +49,7 @@ Note:
 
 - Math.sin() |
 - Random.nextInt() |
-- List.sort(Comparator)
+- List.sort(Comparator) |
 - Accessor (Getter) |
 
 +++
@@ -69,7 +68,7 @@ Note:
 - Bound variables |
 - function scope vs. outer scope |
 - function + variables |
-- final / effective final | 
+- Java: final / effective final | 
 
 Note:
 The variables outside the function scope
@@ -80,14 +79,14 @@ be changed.
 
 ### Map / Reduce / Filter
 
-- doesn't modify input collection |
+- don't modify input collection |
 - map: similar collection with modified elements |
 - reduce: one value for collection |
 - filter: collection without filtered elements |  
 
 +++
 
-### Map 
+### Map similar to
 
 ```java
 Collection<T> result = new Collection<>();
@@ -99,7 +98,7 @@ return result;
 
 +++
 
-### Reduce 
+### Reduce similar to
 
 ```java
 T result = identity;
@@ -117,7 +116,7 @@ Note:
 
 +++
 
-### Filter
+### Filter similar to
 
 ```java
 Collection<T> result = new Collection<>();
@@ -128,7 +127,4 @@ for(Element e : collection) {
 }
 return result;
 ```
-
-
-
 
