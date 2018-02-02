@@ -25,7 +25,9 @@ Note:
 - limit() |
 
 Note:
-- flatMap returns a new Stream for each element of the stream
+- map transforms a stream of type T to a stream of type R
+- flatMap returns a stream of type T into a stream of streams of type R
+  thus a new Stream for each element of the original stream is returned
   Example: Matrix: Stream over rows, return stream of each column
 
 +++
@@ -64,8 +66,8 @@ list.stream().sorted().collect(Collectors.toList());
 
 ![Logo](assets/img/example-1.png)
 
-+++?image=assets/img/example-2.png?size=auto 90%
-
++++?image=assets/img/example-2.png&size=auto 90%
+ 
 
 +++
 ### Exercise
