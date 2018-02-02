@@ -64,7 +64,7 @@ list.stream().sorted().collect(Collectors.toList());
 
 #### IntelliJ - Java Stream Debugger
 
-![Logo](assets/img/example-1.png)
+![Example](assets/img/example-1.png)
 
 +++?image=assets/img/example-2.png&size=90% auto
  
