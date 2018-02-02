@@ -94,6 +94,6 @@ try(Stream<String> lines = Files.lines(path)) {
     final Optional<String> max = 
        lines.max(Comparator.comparingInt(String::length));
     String maxString = max.get();
-    System.out.println(maxString.length() + " : " + maxString);
+    System.out.println(maxString.length() + ": " + maxString);
 }
 ```
