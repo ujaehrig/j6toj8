@@ -3,7 +3,7 @@
 - Instead of Lambda |
 - to static: Class::staticMethod |
 - to constructor: Class::new |
-- to instance method: Class::instanceMethod |
+- to instance method: Type::instanceMethod |
 - to method of object: object::instanceMethod |
 
 +++
