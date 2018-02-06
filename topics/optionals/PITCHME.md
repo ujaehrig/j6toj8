@@ -15,7 +15,7 @@
 
     opt.isPresent();
     opt.filter(i -> i > 10);
-    opt.isPresent(System.out::println);
+    opt.ifPresent(System.out::println);
     opt.map(String::valueOf);
     opt.orElse(0);
     opt.orElseGet(new Random()::nextInt);

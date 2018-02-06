@@ -10,7 +10,7 @@
 Note:
 - Stream, DoubleStream, etc and StreamSupport
 - intermediate methods return a stream
-- terminal methods return void
+- terminal methods return usually no Stream
 - Spliterator: traverse and partition
 
 +++
@@ -93,7 +93,7 @@ Note:
 try(Stream<String> lines = Files.lines(path)) {
     final Optional<String> max = 
        lines.max(Comparator.comparingInt(String::length));
-    String maxString = max.get();
+    String maxString = max.orElse("");
     System.out.println(maxString.length() + ": " + maxString);
 }
 ```
