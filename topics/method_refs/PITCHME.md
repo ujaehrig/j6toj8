@@ -18,7 +18,7 @@ i -> new Integer(i)
 Integer::new
 
 i -> i.toString()
-Integer::toString
+Object::toString
 
 x -> System.out.println(x)
 System.out::println
