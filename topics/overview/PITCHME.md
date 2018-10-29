@@ -5,17 +5,23 @@
 
 ### Overview Part I
 
-- Java 7 Goodies |
-- Functional Programming |
-- Functional Interfaces |
-- Default Methods |
-- Lambda Expressions |
+@ul 
+
+- Java 7 Goodies
+- Functional Programming
+- Functional Interfaces
+- Default Methods
+- Lambda Expressions
+
+@ulend
 
 +++
 
 ### Overview Part II
 
-- Method References |
-- Optional |
-- Stream API |
-- Date-Time API |
+@ul
+- Method References
+- Optional
+- Stream API
+- Date-Time API
+@ulend
